@@ -5,11 +5,11 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { useGetDigimons } from "@/Hooks";
 import { ContainerDigimons } from "@/Components";
 
-export default function Dashboard({ auth }) {
+export default function Dashboard({ auth, digimonsData, pagination }) {
     const { getDigimons } = useGetDigimons();
     const [currentPage, setCurrentPage] = useState(1);
-    const [digimons, setDigimons] = useState([]);
-    const [pageData, setPageData] = useState(null);
+    const [digimons, setDigimons] = useState(digimonsData);
+    const [pageData, setPageData] = useState(pagination);
 
     useEffect(() => {
         getDigimons(currentPage).then((result) => {

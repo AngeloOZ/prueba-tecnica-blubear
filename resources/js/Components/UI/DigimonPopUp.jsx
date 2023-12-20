@@ -111,21 +111,21 @@ function CardBodyDigimon({ digimon }) {
                     Characteristics
                 </h2>
                 <ArticlenBodyDigimon title="Levels">
-                    {digimon.levels.map((level) => (
+                    {digimon.levels?.map((level) => (
                         <li className="ml-4" key={level.id}>
                             {level.level}
                         </li>
                     ))}
                 </ArticlenBodyDigimon>
                 <ArticlenBodyDigimon title="Types">
-                    {digimon.types.map((type) => (
+                    {digimon.types?.map((type) => (
                         <li className="ml-4" key={type.id}>
                             {type.type}
                         </li>
                     ))}
                 </ArticlenBodyDigimon>
                 <ArticlenBodyDigimon title="Attributes">
-                    {digimon.attributes.map((attribute) => (
+                    {digimon.attributes?.map((attribute) => (
                         <li className="ml-4" key={attribute.id}>
                             {attribute.attribute}
                         </li>
@@ -133,7 +133,7 @@ function CardBodyDigimon({ digimon }) {
                 </ArticlenBodyDigimon>
                 <ArticlenBodyDigimon title="Fields" isFull>
                     <div className="flex flex-wrap gap-1">
-                        {digimon.fields.map((field) => (
+                        {digimon.fields?.map((field) => (
                             <Image
                                 className="object-cover w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
                                 key={field.id}
@@ -151,7 +151,7 @@ function CardBodyDigimon({ digimon }) {
                     {digimon.nextEvolutions.length === 0 && (
                         <li className="ml-3">No evolutions</li>
                     )}
-                    {digimon.nextEvolutions.slice(0, 4).map((evolution) => (
+                    {digimon.nextEvolutions?.slice(0, 4).map((evolution) => (
                         <li className="mt-1" key={evolution.id}>
                             <div className="flex items-center">
                                 <User
