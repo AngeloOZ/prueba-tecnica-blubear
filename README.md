@@ -84,9 +84,14 @@ Para la ejecución de este proyecto es necesario tener:
 
         `MAIL_FROM_NAME`
     
+1. Generar la key de `APP_KEY`
+    ```bash
+    php artisan key:generate
+    ```
+
 1. Ejecutar las migraciones
     ```bash
-    php artisan run migrate
+    php artisan migrate
     ```
 1. Para levantar el servidor es necesario primero tener otra consola o dividir la consola y ejecutar el comando que permitirá escuchar los cambios realizados en el front end con react.js e inertia.js
 
