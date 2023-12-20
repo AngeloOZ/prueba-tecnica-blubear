@@ -39,75 +39,6 @@ Para la ejecución de este proyecto es necesario tener:
 - Instalada un servidor de base de datos Mysql o MariaDB
 - Habilitadas las extensiones necesarias en archivo php.ini para que funcione Laravel y composer
 
-### Configurar variables de entorno
-Para este proyecto es necesario primero generar la `APP_KEY` que se lo puede hacer con el siguiente comando, copiar y pegar la key en el archivo
-```
-php artisan key:generate
-```
-También se debe crear una base de datos y configurar principalmente la conexión a la base de datos y la configuración del mail, ya que dado los requisitos es necesario ambas configuraciones 
-
-```
-APP_NAME="Prueba BlueBear"
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://localhost
-
-LOG_CHANNEL=stack
-LOG_DEPRECATIONS_CHANNEL=null
-LOG_LEVEL=debug
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=prueba_blubear
-DB_USERNAME=root
-DB_PASSWORD=
-
-BROADCAST_DRIVER=log
-CACHE_DRIVER=file
-FILESYSTEM_DISK=local
-QUEUE_CONNECTION=sync
-SESSION_DRIVER=file
-SESSION_LIFETIME=120
-
-MEMCACHED_HOST=127.0.0.1
-
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-
-MAIL_MAILER=smtp
-MAIL_HOST=mailpit
-MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS="hello@example.com"
-MAIL_FROM_NAME="${APP_NAME}"
-
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_DEFAULT_REGION=us-east-1
-AWS_BUCKET=
-AWS_USE_PATH_STYLE_ENDPOINT=false
-
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
-PUSHER_HOST=
-PUSHER_PORT=443
-PUSHER_SCHEME=https
-PUSHER_APP_CLUSTER=mt1
-
-VITE_APP_NAME="${APP_NAME}"
-VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-VITE_PUSHER_HOST="${PUSHER_HOST}"
-VITE_PUSHER_PORT="${PUSHER_PORT}"
-VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
-VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-```
-
 ### Levantar ambiente de desarrollo
 
 1. Abrir una consola en el directorio raiz del proyecto
@@ -119,25 +50,60 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
     ```bash
     npm install
     ```
-1. Configurar el archivo de configuraciones del proyecto `.env` que se puede basa en el archivo `.env.example`
+1. Configurar el archivo `.env` que puede basase en el archivo `.env.example`.
+    principalmente se debe configurar:
+    - Configurar conexión de la base de datos
+
+        `DB_CONNECTION`
+
+        `DB_HOST`
+
+        `DB_PORT`
+
+        `DB_DATABASE`
+
+        `DB_USERNAME`
+
+        `DB_PASSWORD`
+
+    - Configurar el servicio de email
+
+        `MAIL_MAILER`
+
+        `MAIL_HOST`
+
+        `MAIL_PORT`
+
+        `MAIL_USERNAME`
+
+        `MAIL_PASSWORD`
+
+        `MAIL_ENCRYPTION`
+
+        `MAIL_FROM_ADDRESS`
+
+        `MAIL_FROM_NAME`
+    
 1. Ejecutar las migraciones
     ```bash
     php artisan run migrate
     ```
 1. Para levantar el servidor es necesario primero tener otra consola o dividir la consola y ejecutar el comando que permitirá escuchar los cambios realizados en el front end con react.js e inertia.js
+
     ```bash
     npm run dev
     ```
-    Y para levantar el servidor de PHP se debe ejecutar el sigueinte comando
-    ```bash
-    php artisan serv
-    ```
-## Desplegar la aplicación 
+Y para levantar el servidor de PHP se debe ejecutar el sigueinte comando
+```bash
+php artisan serv
+```
+
+## Desplegar la aplicación
+1. Subir los archivos al hosting que se tenga previsto utilizar
 1. Ejecutar el comando para construir toda las vistas del fron end
     ```bash
     npm run build
     ```
-1. Subir los archivos al hosting que se tenga
 1. Instalar las dependencias de Laravel
     ```bash
     composer install
