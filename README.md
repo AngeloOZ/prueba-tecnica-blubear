@@ -125,13 +125,13 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
     php artisan run migrate
     ```
 1. Para levantar el servidor es necesario primero tener otra consola o dividir la consola y ejecutar el comando que permitirá escuchar los cambios realizados en el front end con react.js e inertia.js
-```bash
-npm run dev
-```
-Y para levantar el servidor de PHP se debe ejecutar el sigueinte comando
-```bash
-php artisan serv
-```
+    ```bash
+    npm run dev
+    ```
+    Y para levantar el servidor de PHP se debe ejecutar el sigueinte comando
+    ```bash
+    php artisan serv
+    ```
 ## Desplegar la aplicación 
 1. Ejecutar el comando para construir toda las vistas del fron end
 ```bash
