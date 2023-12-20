@@ -134,31 +134,15 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
     ```
 ## Desplegar la aplicación 
 1. Ejecutar el comando para construir toda las vistas del fron end
-```bash
-npm run build
-```
+    ```bash
+    npm run build
+    ```
 1. Subir los archivos al hosting que se tenga
 1. Instalar las dependencias de Laravel
     ```bash
     composer install
     ```
 1. Configurar redirecciones del servidor, esto dependerá de cada proveedor y si se tiene un servidor Apache o NGNIX
-
-## Capturas de la Aplicación
-Inicio de sesión
-![Inicio de sesion](https://res.cloudinary.com/dzfg3crbt/image/upload/v1703090442/Proyectos/prueba%20bluebear/moixlvu7wzr6kpfdrrlw.png)
-
-Registro
-![Registro](https://res.cloudinary.com/dzfg3crbt/image/upload/v1703090524/Proyectos/prueba%20bluebear/b5mhnxjpietc9bd1jy8u.png)
-
-Verificacion email
-![Verificacion email](https://res.cloudinary.com/dzfg3crbt/image/upload/v1703090589/Proyectos/prueba%20bluebear/lhpzumebcil1xu4xdai7.png)
-
-Inicio
-![Inicio](https://res.cloudinary.com/dzfg3crbt/image/upload/v1703090619/Proyectos/prueba%20bluebear/gupcu26psqkqv0egefeb.png)
-
-PopUp Digimon
-![PopUp Digimon](https://res.cloudinary.com/dzfg3crbt/image/upload/v1703090641/Proyectos/prueba%20bluebear/plvgkeawjoweaei7xkfo.png)
 
 ## Capturas de la Aplicación
 Inicio de sesión
